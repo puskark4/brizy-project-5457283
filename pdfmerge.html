@@ -30,6 +30,7 @@
 <body class="antialiased">
     <div class="min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
 
+        <!-- Header Section -->
         <header class="w-full max-w-4xl text-center mb-12">
             <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-4 rounded-lg">
                 <span class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-4 py-2 rounded-xl shadow-lg">
@@ -37,10 +38,11 @@
                 </span>
             </h1>
             <p class="mt-4 text-xl text-gray-600">
-                Your ultimate Chrome extension for effortless PDF management.
+                Your ultimate browser extension for effortless PDF management.
             </p>
         </header>
 
+        <!-- Main Call to Action Section -->
         <section class="w-full max-w-4xl bg-white p-8 sm:p-12 rounded-3xl shadow-xl flex flex-col items-center justify-center space-y-8 mb-16">
             <div class="text-center">
                 <h2 class="text-4xl font-bold text-gray-800 mb-4 rounded-lg">
@@ -49,12 +51,30 @@
                 <p class="text-lg text-gray-700 mb-6 rounded-lg">
                     Easily combine multiple PDF documents, precisely split large PDFs, or seamlessly sign and fill forms. All directly from your browser!
                 </p>
-                <a href="https://chromewebstore.google.com/detail/pdf-merge-and-split-tool/jaeaclinfbdclcfapopmeimibdfallck?pli=1" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform transition-transform duration-300 hover:scale-105 animate-bounce-custom">
-                    Add to Chrome - It's Free!
-                </a>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="https://chromewebstore.google.com/detail/pdf-merge-and-split-tool/jaeaclinfbdclcfapopmeimibdfallck?pli=1" class="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform transition-transform duration-300 hover:scale-105 animate-bounce-custom">
+                        Add to Chrome - It's Free!
+                    </a>
+                    <a href="https://addons.mozilla.org/en-US/android/addon/pdf-tools-ultrondevelopments/" class="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform transition-transform duration-300 hover:scale-105 animate-bounce-custom">
+                        Add to Firefox - It's Free!
+                    </a>
+                </div>
             </div>
-            </section>
+        </section>
 
+        <!-- Privacy and Security Section (NEW) -->
+        <section class="w-full max-w-4xl mb-16 bg-green-50 p-8 sm:p-12 rounded-3xl shadow-xl text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6 rounded-lg">
+                Your Privacy, Our Priority
+            </h2>
+            <p class="text-lg text-gray-700 mb-6 rounded-lg">
+                We take your privacy seriously. All PDF merging, splitting, signing, and filling operations are performed entirely on your device.
+                <span class="font-semibold text-gray-800">Your documents never leave your browser, ensuring complete confidentiality and security.</span> No uploads, no servers, no data collection.
+            </p>
+            <div class="text-blue-600 text-6xl">🔒✨</div>
+        </section>
+
+        <!-- Key Features Section -->
         <section class="w-full max-w-4xl mb-16">
             <h2 class="text-4xl font-bold text-gray-800 text-center mb-10 rounded-lg">
                 Key Features
@@ -88,16 +108,23 @@
                 <div class="bg-white p-6 rounded-2xl shadow-lg text-center transform transition-transform duration-300 hover:scale-105">
                     <div class="text-blue-600 text-5xl mb-4">🌐</div>
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2 rounded-lg">Browser Integrated</h3>
-                    <p class="text-gray-600">No software installation required. Works seamlessly within your Chrome browser.</p>
+                    <p class="text-gray-600">No software installation required. Works seamlessly within your browser.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-lg text-center transform transition-transform duration-300 hover:scale-105">
                     <div class="text-blue-600 text-5xl mb-4">💯</div>
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2 rounded-lg">Completely Free</h3>
                     <p class="text-gray-600">Enjoy all features without any hidden costs or subscriptions.</p>
                 </div>
+                <!-- New feature: Open Source -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center transform transition-transform duration-300 hover:scale-105">
+                    <div class="text-blue-600 text-5xl mb-4">🧑‍💻</div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2 rounded-lg">Open Source</h3>
+                    <p class="text-gray-600">Transparency and community-driven development. Check out the code on <a href="https://github.com/ultrondevelopments/pdftool" target="_blank" rel="noopener" class="text-blue-600 hover:underline">GitHub</a>.</p>
+                </div>
             </div>
         </section>
 
+        <!-- How It Works Section -->
         <section class="w-full max-w-4xl mb-16 bg-blue-50 p-8 sm:p-12 rounded-3xl shadow-xl">
             <h2 class="text-4xl font-bold text-gray-800 text-center mb-10 rounded-lg">
                 How It Works
@@ -106,7 +133,7 @@
                 <div class="flex flex-col items-center text-center">
                     <div class="bg-blue-600 text-white text-3xl font-bold w-16 h-16 flex items-center justify-center rounded-full mb-4 shadow-md">1</div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2 rounded-lg">Install the Extension</h3>
-                    <p class="text-gray-600">Click "Add to Chrome" and pin the extension to your browser toolbar.</p>
+                    <p class="text-gray-600">Click "Add to Chrome" or "Add to Firefox" and pin the extension to your browser toolbar.</p>
                 </div>
                 <div class="flex flex-col items-center text-center">
                     <div class="bg-blue-600 text-white text-3xl font-bold w-16 h-16 flex items-center justify-center rounded-full mb-4 shadow-md">2</div>
@@ -121,21 +148,29 @@
             </div>
         </section>
 
+        <!-- Final Call to Action Section -->
         <section class="w-full max-w-4xl text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-800 mb-6 rounded-lg">
                 Ready to simplify your PDF tasks?
             </h2>
-            <a href="https://chromewebstore.google.com/detail/pdf-merge-and-split-tool/jaeaclinfbdclcfapopmeimibdfallck?pli=1" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full text-2xl shadow-lg transform transition-transform duration-300 hover:scale-105 animate-bounce-custom">
-                Get the Extension Now!
-            </a>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://chromewebstore.google.com/detail/pdf-merge-and-split-tool/jaeaclinfbdclcfapopmeimibdfallck?pli=1" class="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full text-2xl shadow-lg transform transition-transform duration-300 hover:scale-105 animate-bounce-custom">
+                    Get Chrome Extension Now!
+                </a>
+                <a href="https://addons.mozilla.org/en-US/android/addon/pdf-tools-ultrondevelopments/" class="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-10 rounded-full text-2xl shadow-lg transform transition-transform duration-300 hover:scale-105 animate-bounce-custom">
+                    Get Firefox Extension Now!
+                </a>
+            </div>
         </section>
 
+        <!-- Buy Me a Coffee Section -->
         <section class="w-full max-w-4xl text-center mb-8">
             <a href="https://coff.ee/puskark" target="_blank" rel="noopener" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full text-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
                 ☕ Buy Me a Coffee
             </a>
         </section>
 
+        <!-- Footer Section -->
         <footer class="w-full max-w-4xl text-center text-gray-500 text-sm mt-12 py-6 border-t border-gray-200">
             <p>© 2025 PDF Merge, Split, Sign and Fill Tool. All rights reserved.</p>
             <p class="mt-2">Built with ❤️ by <a href="https://ultrondevelopments.com.au" class="text-blue-600 hover:underline">Ultron Developments</a></p>
@@ -145,4 +180,4 @@
 </body>
 </html>
 
-
+                

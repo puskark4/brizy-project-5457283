@@ -41,6 +41,95 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: relative;
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand .logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(51, 51, 51, 0.95);
+            backdrop-filter: blur(10px);
+            min-width: 250px;
+            padding: 10px 0;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+        }
+        
+        .nav-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown-content a {
+            display: block;
+            color: white;
+            padding: 8px 20px;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .dropdown-content a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        .hero-section {
             padding: 100px 0;
             text-align: center;
         }
@@ -210,6 +299,42 @@
         }
         
         @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(51, 51, 51, 0.95);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 20px 0;
+                gap: 0;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-toggle {
+                display: flex;
+            }
+            
+            .nav-link {
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .dropdown-content {
+                position: static;
+                display: block;
+                background: rgba(0, 0, 0, 0.3);
+                min-width: auto;
+                width: 100%;
+            }
+            
             h1 {
                 font-size: 2.5rem;
             }
@@ -234,10 +359,45 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Power BI & Data Visualization</h1>
-            <p class="subtitle">Transform your data into actionable insights with professional Power BI development and advanced data visualization solutions</p>
-            <a href="#contact" class="cta-button">Get Started Today</a>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="https://cloud-1de12d.b-cdn.net/media/iW=180&iH=any/de85343f3ce36fcb056a200e691ca68b.jpg" alt="Ultron Developments" class="logo">
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="contact-us.html" class="nav-link">Contact Us</a>
+                    <div class="nav-dropdown">
+                        <a href="powerapps.html" class="nav-link">PowerApps</a>
+                        <div class="dropdown-content">
+                            <a href="centre-of-excellence-kit-coe-help.html">Centre of Excellence Kit (CoE) Help</a>
+                            <a href="aged-care-powerapps.html">Aged Care Management Application in PowerApps</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="ai.html" class="nav-link">AI</a>
+                        <div class="dropdown-content">
+                            <a href="ai-developers-in-perth.html">AI Developers in Perth</a>
+                            <a href="ai-developers-in-sydney.html">AI Developers in Sydney</a>
+                            <a href="microsoft-dragon-healthcare-ai-developers-in-australia.html">Microsoft Dragon Healthcare AI Developers in Australia</a>
+                            <a href="isthisspam.html">isthisspam</a>
+                        </div>
+                    </div>
+                    <a href="power-bi-comprehensive.html" class="nav-link active">Power BI</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-section">
+            <div class="container">
+                <h1>Power BI & Data Visualization</h1>
+                <p class="subtitle">Transform your data into actionable insights with professional Power BI development and advanced data visualization solutions</p>
+                <a href="contact-us.html" class="cta-button">Get Started Today</a>
+            </div>
         </div>
     </header>
 
@@ -402,18 +562,18 @@
             
             <div class="contact-info">
                 <div class="contact-item">
-                    <h4>📧 Email Us</h4>
-                    <p>info@ultrondevelopments.com.au</p>
+                    <h4>📧 Get In Touch</h4>
+                    <p>Ready to start your Power BI project?</p>
                 </div>
                 
                 <div class="contact-item">
-                    <h4>📞 Call Us</h4>
-                    <p>+61 (08) 6102 7101</p>
+                    <h4>📞 Talk to Experts</h4>
+                    <p>Speak with our Power BI specialists</p>
                 </div>
                 
                 <div class="contact-item">
-                    <h4>🌍 Location</h4>
-                    <p>Perth, WA, Australia<br>Serving clients globally</p>
+                    <h4>🌍 Global Service</h4>
+                    <p>Based in Perth, WA<br>Serving clients worldwide</p>
                 </div>
             </div>
             
@@ -429,5 +589,19 @@
             <p style="margin-top: 10px; opacity: 0.8;">Professional Power BI development and data visualization services across Australia and globally.</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,422 @@
+/* Ultron Developments Menu Fix */
+
+/* Improve mobile menu styling */
+@media (max-width: 991px) {
+  /* Fix hamburger menu positioning and styling */
+  .brz-mm-menu__icon {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 6px !important;
+    padding: 10px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+    cursor: pointer !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .brz-mm-menu__icon:hover {
+    background: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+    transform: translateY(-1px) !important;
+  }
+  
+  /* Improve hamburger icon visibility */
+  .brz-mm-menu__icon svg {
+    width: 24px !important;
+    height: 24px !important;
+    fill: #1c1c1c !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  /* Style the mobile menu overlay */
+  .brz-menu__mmenu {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 9998 !important;
+    padding: 80px 30px 30px 30px !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
+    overflow-y: auto !important;
+    border-right: 3px solid #1176c1 !important;
+  }
+  
+  /* Show mobile menu when active */
+  .brz-menu__mmenu.brz-menu--active,
+  .brz-menu__mmenu.brz-menu--opened {
+    transform: translateX(0) !important;
+  }
+  
+  /* Style mobile menu items */
+  .brz-menu__mmenu .brz-menu__ul {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+  
+  .brz-menu__mmenu .brz-menu__item {
+    width: 100% !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    position: relative !important;
+  }
+  
+  .brz-menu__mmenu .brz-menu__item:last-child {
+    border-bottom: none !important;
+  }
+  
+  .brz-menu__mmenu .brz-menu__item > .brz-a {
+    display: block !important;
+    padding: 18px 0 !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    color: #1c1c1c !important;
+    text-decoration: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+  }
+  
+  .brz-menu__mmenu .brz-menu__item > .brz-a::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 0 !important;
+    height: 2px !important;
+    background: #1176c1 !important;
+    transition: width 0.3s ease !important;
+  }
+  
+  .brz-menu__mmenu .brz-menu__item:hover > .brz-a {
+    color: #1176c1 !important;
+    background: rgba(17, 118, 193, 0.05) !important;
+    padding-left: 10px !important;
+  }
+  
+  .brz-menu__mmenu .brz-menu__item:hover > .brz-a::after {
+    width: 50px !important;
+  }
+  
+  .brz-menu__mmenu .brz-menu__item--current > .brz-a {
+    color: #1176c1 !important;
+    font-weight: 600 !important;
+    background: rgba(17, 118, 193, 0.1) !important;
+  }
+  
+  .brz-menu__mmenu .brz-menu__item--current > .brz-a::after {
+    width: 100% !important;
+  }
+  
+  /* Style submenu in mobile */
+  .brz-menu__mmenu .brz-menu__sub-menu {
+    position: static !important;
+    background: rgba(17, 118, 193, 0.05) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    border-left: 3px solid #1176c1 !important;
+    margin-left: 15px !important;
+  }
+  
+  .brz-menu__mmenu .brz-menu__sub-menu .brz-menu__item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    padding-left: 20px !important;
+  }
+  
+  .brz-menu__mmenu .brz-menu__sub-menu .brz-a {
+    font-size: 16px !important;
+    color: #555 !important;
+    padding: 14px 0 !important;
+    font-weight: 400 !important;
+  }
+  
+  .brz-menu__mmenu .brz-menu__sub-menu .brz-a:hover {
+    color: #1176c1 !important;
+    background: rgba(17, 118, 193, 0.08) !important;
+  }
+  
+  /* Fix header content spacing when menu is open */
+  body.brz-menu-opened {
+    overflow: hidden !important;
+  }
+  
+  /* Hide main navigation on mobile */
+  .brz-menu__container .brz-menu:not(.brz-menu__mmenu) {
+    display: none !important;
+  }
+}
+
+/* Desktop menu improvements */
+@media (min-width: 992px) {
+  /* Hide mobile menu icon on desktop */
+  .brz-mm-menu__icon {
+    display: none !important;
+  }
+  
+  /* Hide mobile menu on desktop */
+  .brz-menu__mmenu {
+    display: none !important;
+  }
+  
+  /* Improve desktop menu styling */
+  .brz-menu__ul {
+    align-items: center !important;
+    gap: 0 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+  
+  .brz-menu__item > .brz-a {
+    padding: 12px 18px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+    font-weight: 500 !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  
+  .brz-menu__item > .brz-a::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent) !important;
+    transition: left 0.5s ease !important;
+  }
+  
+  .brz-menu__item:hover > .brz-a::before {
+    left: 100% !important;
+  }
+  
+  .brz-menu__item:hover > .brz-a {
+    background: rgba(17, 118, 193, 0.1) !important;
+    color: #1176c1 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 15px rgba(17, 118, 193, 0.2) !important;
+  }
+  
+  /* Improve dropdown styling */
+  .brz-menu__sub-menu {
+    border-radius: 12px !important;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    margin-top: 10px !important;
+    opacity: 0 !important;
+    transform: translateY(-10px) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
+    pointer-events: none !important;
+  }
+  
+  .brz-menu__item:hover .brz-menu__sub-menu {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+  }
+  
+  .brz-menu__sub-menu .brz-menu__item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    transform: translateX(-20px) !important;
+    opacity: 0 !important;
+    animation: slideInMenu 0.3s ease forwards !important;
+  }
+  
+  .brz-menu__sub-menu .brz-menu__item:nth-child(1) { animation-delay: 0.1s !important; }
+  .brz-menu__sub-menu .brz-menu__item:nth-child(2) { animation-delay: 0.2s !important; }
+  .brz-menu__sub-menu .brz-menu__item:nth-child(3) { animation-delay: 0.3s !important; }
+  .brz-menu__sub-menu .brz-menu__item:nth-child(4) { animation-delay: 0.4s !important; }
+  
+  @keyframes slideInMenu {
+    to {
+      transform: translateX(0) !important;
+      opacity: 1 !important;
+    }
+  }
+  
+  .brz-menu__sub-menu .brz-menu__item:last-child {
+    border-bottom: none !important;
+  }
+  
+  .brz-menu__sub-menu .brz-a {
+    padding: 16px 24px !important;
+    color: #333 !important;
+    background: #ffffff !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+  }
+  
+  .brz-menu__sub-menu .brz-a::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 0 !important;
+    height: 100% !important;
+    background: #1176c1 !important;
+    transition: width 0.3s ease !important;
+  }
+  
+  .brz-menu__sub-menu .brz-a:hover {
+    background: #f8f9fa !important;
+    color: #1176c1 !important;
+    padding-left: 30px !important;
+  }
+  
+  .brz-menu__sub-menu .brz-a:hover::before {
+    width: 4px !important;
+  }
+}
+
+/* General menu improvements */
+.brz-menu {
+  font-family: 'Red Hat Text', sans-serif !important;
+}
+
+.brz-menu__item--current > .brz-a {
+  color: #1176c1 !important;
+  font-weight: 600 !important;
+}
+
+/* Fix header spacing and positioning */
+.brz-section .brz-container {
+  position: relative !important;
+}
+
+/* Smooth transitions for better UX */
+.brz-menu__item {
+  transition: all 0.3s ease !important;
+}
+
+/* Fix logo sizing on mobile */
+@media (max-width: 767px) {
+  .brz-image {
+    max-width: 200px !important;
+  }
+  
+  /* Ensure proper spacing for mobile menu */
+  .brz-section:first-child {
+    padding-top: 80px !important;
+  }
+}
+
+/* Ensure proper z-indexing for layered elements */
+.brz-menu__container {
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+/* Add subtle animation for menu appearance */
+.brz-menu__ul {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease !important;
+}
+
+/* Improve accessibility */
+.brz-menu__item:focus-within > .brz-a,
+.brz-menu__item > .brz-a:focus {
+  outline: 2px solid #1176c1 !important;
+  outline-offset: 2px !important;
+  background: rgba(17, 118, 193, 0.1) !important;
+}
+
+/* Enhanced mobile menu interactions */
+@media (max-width: 991px) {
+  /* Menu close button styling */
+  .brz-mm-menu__close {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    background: transparent !important;
+    border: none !important;
+    font-size: 24px !important;
+    color: #1c1c1c !important;
+    cursor: pointer !important;
+    z-index: 10000 !important;
+  }
+  
+  /* Mobile menu backdrop */
+  .brz-menu__mmenu::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    z-index: -1 !important;
+  }
+}
+
+/* Responsive typography improvements */
+@media (max-width: 480px) {
+  .brz-menu__mmenu .brz-menu__item > .brz-a {
+    font-size: 16px !important;
+    padding: 16px 0 !important;
+  }
+  
+  .brz-menu__mmenu {
+    padding: 70px 20px 20px 20px !important;
+  }
+}
+
+/* Fix any layout shifts */
+@media (min-width: 992px) {
+  .brz-menu__container {
+    min-height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+/* Loading state for menu */
+.brz-menu {
+  opacity: 0 !important;
+  animation: fadeInMenu 0.5s ease forwards !important;
+}
+
+@keyframes fadeInMenu {
+  to {
+    opacity: 1 !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .brz-menu__item > .brz-a {
+    border: 1px solid currentColor !important;
+  }
+  
+  .brz-mm-menu__icon {
+    border: 2px solid currentColor !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .brz-menu__item,
+  .brz-menu__mmenu,
+  .brz-mm-menu__icon {
+    transition: none !important;
+    animation: none !important;
+  }
+}
